@@ -3,7 +3,7 @@ import { Icon } from "@iconify/react";
 
 const Navbar = () => {
   return (
-    <div className="nvbr">
+    <div className='nvbr'>
       <nav className='container d-flex align-items-center justify-content-between'>
         <div>
           <img
@@ -15,6 +15,9 @@ const Navbar = () => {
         <ul className='ul-nav d-none d-md-flex'>
           <li className='li-nav'>
             <Link to='/'>Home</Link>
+          </li>
+          <li className='li-nav'>
+            <Link to='/product'>Product</Link>
           </li>
           <li className='li-nav'>
             <Link to='/about'>About</Link>

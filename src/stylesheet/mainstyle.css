@@ -6,6 +6,9 @@ body {
   background-color: #222;
   color: #eee;
 }
+body .text-green {
+  color: #3ac772;
+}
 body .nvbr {
   position: fixed;
   width: 100vw;
@@ -39,6 +42,65 @@ body .nvbr .icon-nav {
 body .box-content {
   min-height: calc(var(--vh, 1vh) * 92);
   padding-top: 70px;
+}
+body .box-content #welcome {
+  margin-bottom: 40px;
+  min-height: 70vh;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+body .box-content #welcome .welcome-img-container {
+  min-height: 70vh;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .box-content #welcome .welcome-img-container .welcome-img {
+  width: 80%;
+  max-width: 300px;
+}
+body .box-content #welcome .welcome-text-container {
+  width: 50%;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+body .box-content #welcome .welcome-text-container h1 {
+  font-weight: bold;
+}
+body .box-content .card-point-container {
+  display: flex;
+  justify-content: center;
+}
+body .box-content .card-point-container .card-point {
+  display: flex;
+  margin: 0px 12px;
+  flex-direction: column;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #d4d2d3;
+}
+body .box-content .card-point-container .card-point .card-point-header {
+  height: 200px;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .box-content .card-point-container .card-point .card-point-header .icon-point {
+  color: #00ad55;
+  font-size: 5rem;
+}
+body .box-content .card-point-container .card-point .card-point-body {
+  height: 200px;
+  width: 300px;
+  color: #222;
+}
+body .box-content .card-point-container .card-point .card-point-body h3 {
+  font-weight: bold;
 }
 body .not-found-page {
   min-height: calc(var(--vh, 1vh) * 92);

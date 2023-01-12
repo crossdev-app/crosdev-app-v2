@@ -3,6 +3,7 @@ import Layout from "./pages/Layout";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Notfound from "./pages/Notfound";
+import Product from "./pages/Product";
 
 export default function App() {
   return (
@@ -18,6 +19,10 @@ export default function App() {
           <Route
             path='about'
             element={<About />}
+          />
+          <Route
+            path='product'
+            element={<Product />}
           />
           <Route
             path='*'

@@ -2,6 +2,8 @@
 $dark-mode-bg: #222;
 $dark-font: #eee;
 $base-green: #4faf78;
+$base-green-light: #3ac772;
+$base-green-dark: #00ad55;
 
 body {
   min-height: calc(var(--vh, 1vh) * 100);
@@ -9,6 +11,10 @@ body {
   font-family: "Nunito", sans-serif;
   background-color: $dark-mode-bg;
   color: $dark-font;
+
+  .text-green {
+    color: $base-green-light;
+  }
 
   .nvbr {
     position: fixed;
@@ -51,6 +57,78 @@ body {
   .box-content {
     min-height: calc(var(--vh, 1vh) * 92);
     padding-top: 70px;
+
+    #welcome {
+      margin-bottom: 40px;
+      min-height: 70vh;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+
+      .welcome-img-container {
+        min-height: 70vh;
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .welcome-img {
+          width: 80%;
+          max-width: 300px;
+        }
+      }
+
+      .welcome-text-container {
+        width: 50%;
+        min-height: 70vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h1 {
+          font-weight: bold;
+        }
+      }
+    }
+
+    .card-point-container {
+      display: flex;
+      justify-content: center;
+
+      .card-point {
+        display: flex;
+        margin: 0px 12px;
+        flex-direction: column;
+        border-radius: 12px;
+        overflow: hidden;
+        background-color: #d4d2d3;
+
+        .card-point-header {
+          height: 200px;
+          width: 300px;
+          // background-color: red;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          .icon-point {
+            color: $base-green-dark;
+            font-size: 5rem;
+          }
+        }
+
+        .card-point-body {
+          height: 200px;
+          width: 300px;
+          color: #222;
+          // background-color: green;
+
+          h3 {
+            font-weight: bold;
+          }
+        }
+      }
+    }
   }
 
   .not-found-page {
