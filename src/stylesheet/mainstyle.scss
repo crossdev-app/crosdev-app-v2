@@ -5,6 +5,21 @@ $base-green: #4faf78;
 $base-green-light: #3ac772;
 $base-green-dark: #00ad55;
 
+// Custom Breakpoint
+$screen-medium: 1200px;
+$screen-small: 800px;
+@mixin scm {
+  @media (max-width: #{$screen-medium}) {
+    @content;
+  }
+}
+
+@mixin scs {
+  @media (max-width: #{$screen-small}) {
+    @content;
+  }
+}
+
 body {
   min-height: calc(var(--vh, 1vh) * 100);
   width: 100vw;
@@ -16,13 +31,18 @@ body {
     color: $base-green-light;
   }
 
+  .c-link {
+    color: $base-green-light;
+    text-decoration: none;
+  }
+
   .nvbr {
     position: fixed;
     width: 100vw;
     background-color: $dark-mode-bg;
 
     nav {
-      padding: 8px;
+      padding: 12px;
     }
 
     .nav-logo {
@@ -32,11 +52,16 @@ body {
     .ul-nav {
       margin: 0px;
       padding: 0px;
+      display: flex;
+
+      @include scm {
+        display: none;
+      }
     }
 
     .li-nav {
       list-style: none;
-      margin: 0px 8px;
+      margin: 0px 14px;
     }
 
     .li-nav a {
@@ -51,26 +76,40 @@ body {
     .icon-nav {
       font-size: 24px;
       color: $base-green;
+      display: none;
+
+      @include scm {
+        display: block;
+      }
     }
   }
 
   .box-content {
     min-height: calc(var(--vh, 1vh) * 92);
-    padding-top: 70px;
 
     #welcome {
-      margin-bottom: 40px;
-      min-height: 70vh;
+      margin-bottom: 20px;
+      padding-top: 100px;
+      min-height: 85vh;
       width: 100%;
       display: flex;
       flex-wrap: wrap;
 
+      @include scm {
+        height: 90vh;
+      }
+
       .welcome-img-container {
-        min-height: 70vh;
         width: 50%;
+        min-width: 300px;
         display: flex;
         align-items: center;
         justify-content: center;
+
+        @include scs {
+          width: 100%;
+          // margin-bottom: 50px;
+        }
 
         .welcome-img {
           width: 80%;
@@ -80,10 +119,15 @@ body {
 
       .welcome-text-container {
         width: 50%;
-        min-height: 70vh;
+        // min-height: 45vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
+
+        @include scs {
+          width: 100%;
+          text-align: center;
+        }
 
         h1 {
           font-weight: bold;
@@ -92,21 +136,29 @@ body {
     }
 
     .card-point-container {
+      margin-bottom: 40px;
       display: flex;
       justify-content: center;
+      flex-wrap: wrap;
 
       .card-point {
+        width: 300px;
         display: flex;
-        margin: 0px 12px;
+        margin: 12px 12px;
         flex-direction: column;
         border-radius: 12px;
         overflow: hidden;
         background-color: #d4d2d3;
+        box-shadow: rgba(77, 255, 61, 0.25) 0px 6px 12px -2px,
+          rgba(81, 255, 0, 0.3) 0px 3px 7px -3px;
+
+        @include scm {
+          width: 100%;
+        }
 
         .card-point-header {
-          height: 200px;
-          width: 300px;
-          // background-color: red;
+          // height: 200px;
+          padding: 30px;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -118,14 +170,27 @@ body {
         }
 
         .card-point-body {
-          height: 200px;
-          width: 300px;
+          // height: 200px;
           color: #222;
-          // background-color: green;
 
           h3 {
             font-weight: bold;
           }
+        }
+      }
+    }
+
+    .carousel {
+      .carousel-item {
+        height: 70vh;
+        max-height: 500px;
+
+        .img-carousel-box {
+          height: 100%;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          // padding-top: 50px;
         }
       }
     }
@@ -151,6 +216,7 @@ body {
 
   .footer {
     height: calc(var(--vh, 1vh) * 8);
+    margin-top: 50px;
     font-size: 0.8rem;
     // background-color: #fff;
 

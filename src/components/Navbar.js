@@ -7,12 +7,12 @@ const Navbar = () => {
       <nav className='container d-flex align-items-center justify-content-between'>
         <div>
           <img
-            src='./brand_logo.png'
+            src='../brand_logo.png'
             className='nav-logo'
             alt='crossdev'
           />
         </div>
-        <ul className='ul-nav d-none d-md-flex'>
+        <ul className='ul-nav'>
           <li className='li-nav'>
             <Link to='/'>Home</Link>
           </li>
@@ -26,12 +26,10 @@ const Navbar = () => {
             <Link to='/contact'>Contact</Link>
           </li>
         </ul>
-        <div className='d-block d-md-none'>
-          <Icon
-            icon='charm:menu-hamburger'
-            className='icon-nav'
-          />
-        </div>
+        <Icon
+          icon='charm:menu-hamburger'
+          className='icon-nav'
+        />
       </nav>
     </div>
   );

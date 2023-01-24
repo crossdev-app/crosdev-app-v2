@@ -1,5 +1,6 @@
 import React from "react";
 import Cardpointcontainer from "../components/Cardpointcontainer";
+import Homecarousel from "../components/Homecarousel";
 
 const Home = () => {
   return (
@@ -21,6 +22,8 @@ const Home = () => {
       </div>
       <p className='text-green text-center'>Why you should choose us?</p>
       <Cardpointcontainer />
+      <p className='text-green text-center'>Take a look to our product</p>
+      <Homecarousel />
     </div>
   );
 };

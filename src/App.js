@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Notfound from "./pages/Notfound";
 import Product from "./pages/Product";
+import ProductLP from "./pages/ProductLP";
 
 export default function App() {
   return (
@@ -22,8 +23,16 @@ export default function App() {
           />
           <Route
             path='product'
-            element={<Product />}
-          />
+            element={<Product />}>
+            <Route
+              index
+              element={<Product />}
+            />
+            <Route
+              path='landing-page'
+              element={<ProductLP />}
+            />
+          </Route>
           <Route
             path='*'
             element={<Notfound />}
