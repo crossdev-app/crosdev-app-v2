@@ -86,17 +86,17 @@ body {
 
   .box-content {
     min-height: calc(var(--vh, 1vh) * 92);
+    padding-top: 80px;
 
     #welcome {
       margin-bottom: 20px;
-      padding-top: 100px;
-      min-height: 85vh;
+      min-height: 70vh;
       width: 100%;
       display: flex;
       flex-wrap: wrap;
 
       @include scm {
-        height: 90vh;
+        height: 80vh;
       }
 
       .welcome-img-container {

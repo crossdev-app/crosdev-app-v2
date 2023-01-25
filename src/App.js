@@ -5,6 +5,8 @@ import About from "./pages/About";
 import Notfound from "./pages/Notfound";
 import Product from "./pages/Product";
 import ProductLP from "./pages/ProductLP";
+import ProductCP from "./pages/ProductCP";
+import ProductERP from "./pages/ProductERP";
 
 export default function App() {
   return (
@@ -31,6 +33,14 @@ export default function App() {
             <Route
               path='landing-page'
               element={<ProductLP />}
+            />
+            <Route
+              path='company-profile'
+              element={<ProductCP />}
+            />
+            <Route
+              path='erp'
+              element={<ProductERP />}
             />
           </Route>
           <Route

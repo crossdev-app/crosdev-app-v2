@@ -57,18 +57,18 @@ body .nvbr .icon-nav {
 }
 body .box-content {
   min-height: calc(var(--vh, 1vh) * 92);
+  padding-top: 80px;
 }
 body .box-content #welcome {
   margin-bottom: 20px;
-  padding-top: 100px;
-  min-height: 85vh;
+  min-height: 70vh;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
 }
 @media (max-width: 1200px) {
   body .box-content #welcome {
-    height: 90vh;
+    height: 80vh;
   }
 }
 body .box-content #welcome .welcome-img-container {

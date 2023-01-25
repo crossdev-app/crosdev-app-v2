@@ -38,7 +38,14 @@ const Homecarousel = () => {
 
         <Carousel.Caption>
           <h3>Company Profile Website</h3>
-          <p>A website to intruduce your company. Explore</p>
+          <p>
+            A website to intruduce your company.{" "}
+            <Link
+              to={"/product/company-profile"}
+              className='c-link'>
+              Explore
+            </Link>
+          </p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -55,7 +62,12 @@ const Homecarousel = () => {
           <h3>ERP Module</h3>
           <p>
             Enterprise Resource Planing module to boost your company
-            productivity. Explore
+            productivity.{" "}
+            <Link
+              to={"/product/erp"}
+              className='c-link'>
+              Explore
+            </Link>
           </p>
         </Carousel.Caption>
       </Carousel.Item>

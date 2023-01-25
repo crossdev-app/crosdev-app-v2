@@ -1,11 +1,11 @@
 import React from "react";
 
-const ProductLP = () => {
+const ProductERP = () => {
   return (
     <div className='container box-content'>
-      <h3>Landing Page</h3>
+      <h3>Enterprise Resource Planning</h3>
     </div>
   );
 };
 
-export default ProductLP;
+export default ProductERP;
