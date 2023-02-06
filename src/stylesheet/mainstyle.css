@@ -13,6 +13,10 @@ body .c-link {
   color: #3ac772;
   text-decoration: none;
 }
+body .s-link {
+  cursor: pointer;
+  color: #3ac772;
+}
 body .nvbr {
   position: fixed;
   width: 100vw;
@@ -54,6 +58,118 @@ body .nvbr .icon-nav {
   body .nvbr .icon-nav {
     display: block;
   }
+}
+body #def-form .inputbox {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin-bottom: 15px;
+}
+body #def-form .inputbox input {
+  color: #3ac772;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border: 2px solid #555;
+  outline: none;
+  background: none;
+  padding: 4px 10px;
+  border-radius: 10px;
+  font-size: 1em;
+}
+body #def-form .inputbox input:focus + span {
+  color: #00ad55;
+  font-size: 0.8em;
+  top: -20px;
+}
+body #def-form .inputbox input:valid + span {
+  color: #00ad55;
+  font-size: 0.8em;
+  top: -20px;
+}
+body #def-form .inputbox input.inpt-pswd {
+  padding-right: 33px;
+}
+body #def-form .inputbox span {
+  position: absolute;
+  top: 6px;
+  left: 20px;
+  font-size: 0.9em;
+  transition: 0.2s;
+  font-family: sans-serif;
+  color: #555;
+  z-index: -1;
+}
+body #def-form .inputbox .strngth-label {
+  top: auto;
+  bottom: -3px;
+  font-size: 0.7em;
+}
+body #def-form .inputbox .icn-pswd {
+  color: #555;
+  font-size: 1.3em;
+  position: absolute;
+  top: 7px;
+  right: 10px;
+  cursor: pointer;
+}
+body #def-form .inputbox :last-child {
+  margin-bottom: 0;
+}
+body #def-form .btn-form {
+  background-color: #00ad55;
+  border: 1px solid transparent;
+  padding: 4px 30px;
+  border-radius: 30px;
+  font-size: 0.8em;
+}
+body #def-form .btn-form:hover {
+  color: white;
+}
+body .login-page {
+  height: calc(var(--vh, 1vh) * 90 - 50px);
+  display: flex;
+}
+body .login-page .l-logo {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+body .login-page .l-logo .l-img {
+  height: 60px;
+}
+body .login-page .l-logo .v-line {
+  position: absolute;
+  height: 80%;
+  width: 1px;
+  background-color: rgba(0, 173, 85, 0.3);
+  border-radius: 50px;
+  right: 0;
+}
+body .login-page .l-form {
+  width: 50%;
+}
+body .login-page .l-form .sgnin {
+  margin-top: 100px;
+  margin-bottom: 30px;
+}
+body .login-page .l-form .sgnup {
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+body .login-page .l-form .box-form {
+  margin: 0px auto;
+  width: 80%;
+  max-width: 300px;
+  height: 100px;
+}
+body .login-page .l-form .box-form p {
+  margin-top: 30px;
+  color: #777;
+  text-align: center;
 }
 body .box-content {
   min-height: calc(var(--vh, 1vh) * 92);

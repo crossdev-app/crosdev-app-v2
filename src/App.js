@@ -7,6 +7,8 @@ import Product from "./pages/Product";
 import ProductLP from "./pages/ProductLP";
 import ProductCP from "./pages/ProductCP";
 import ProductERP from "./pages/ProductERP";
+import Users from "./pages/Users";
+import Login from "./pages/Login";
 
 export default function App() {
   return (
@@ -22,6 +24,10 @@ export default function App() {
           <Route
             path='about'
             element={<About />}
+          />
+          <Route
+            path='users'
+            element={<Users />}
           />
           <Route
             path='product'
@@ -48,6 +54,10 @@ export default function App() {
             element={<Notfound />}
           />
         </Route>
+        <Route
+          path='/login'
+          element={<Login />}
+        />
       </Routes>
     </BrowserRouter>
   );
