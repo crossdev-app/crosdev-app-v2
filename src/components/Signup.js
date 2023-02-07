@@ -16,6 +16,7 @@ const Signup = () => {
             <input
               type='text'
               required='required'
+              autoFocus={true}
             />
             <span>Name</span>
           </div>

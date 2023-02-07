@@ -1,7 +1,7 @@
 import { Icon } from "@iconify/react";
 import { useDispatch } from "react-redux";
 import { setLoginForm } from "../features/loginSlice";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Signin = () => {
   const dispatch = useDispatch();
@@ -13,6 +13,8 @@ const Signin = () => {
     setVisibility(!visiblePassword);
   };
 
+  useEffect(() => {}, []);
+
   return (
     <>
       <h3 className='text-center text-green sgnin'>Sign In</h3>
@@ -20,8 +22,10 @@ const Signin = () => {
         <form id='def-form'>
           <div className='inputbox'>
             <input
+              name='email'
               type='text'
               required='required'
+              autoFocus={true}
             />
             <span>Email</span>
           </div>
