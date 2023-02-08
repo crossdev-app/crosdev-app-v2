@@ -1,3 +1,4 @@
+import { Icon } from "@iconify/react";
 import React from "react";
 import { useSelector } from "react-redux";
 import Footer from "../components/Footer";
@@ -20,6 +21,21 @@ const Login = () => {
         </div>
         <div className='l-form'>
           {stateLogin.loginForm === "Signin" ? <Signin /> : <Signup />}
+          <span className='text-center btm-text'>----- login with -----</span>
+          <div className='icon-login-container'>
+            <Icon
+              icon={"bi:google"}
+              className='l-icon'
+            />
+            <Icon
+              icon={"bi:facebook"}
+              className='l-icon'
+            />
+            <Icon
+              icon={"bi:github"}
+              className='l-icon'
+            />
+          </div>
         </div>
       </div>
       <Footer />

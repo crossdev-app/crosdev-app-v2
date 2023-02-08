@@ -128,8 +128,15 @@ body #def-form .btn-form:hover {
   color: white;
 }
 body .login-page {
-  height: calc(var(--vh, 1vh) * 90 - 50px);
+  min-height: calc(var(--vh, 1vh) * 90 - 40px);
   display: flex;
+}
+@media (max-width: 800px) {
+  body .login-page {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }
 body .login-page .l-logo {
   width: 50%;
@@ -137,6 +144,12 @@ body .login-page .l-logo {
   justify-content: center;
   align-items: center;
   position: relative;
+}
+@media (max-width: 800px) {
+  body .login-page .l-logo {
+    width: 100%;
+    height: 100px;
+  }
 }
 body .login-page .l-logo .l-img {
   height: 60px;
@@ -149,27 +162,58 @@ body .login-page .l-logo .v-line {
   border-radius: 50px;
   right: 0;
 }
+@media (max-width: 800px) {
+  body .login-page .l-logo .v-line {
+    height: 1px;
+    width: 80%;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
 body .login-page .l-form {
   width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #777;
 }
-body .login-page .l-form .sgnin {
-  margin-top: 100px;
-  margin-bottom: 30px;
+@media (max-width: 800px) {
+  body .login-page .l-form {
+    width: 100%;
+  }
 }
-body .login-page .l-form .sgnup {
-  margin-top: 50px;
+body .login-page .l-form h3 {
+  margin-top: 30px;
   margin-bottom: 30px;
 }
 body .login-page .l-form .box-form {
   margin: 0px auto;
   width: 80%;
   max-width: 300px;
-  height: 100px;
 }
 body .login-page .l-form .box-form p {
   margin-top: 30px;
   color: #777;
   text-align: center;
+}
+body .login-page .l-form .btm-text {
+  font-style: italic;
+  font-size: 0.8em;
+}
+body .login-page .l-form .icon-login-container {
+  margin-top: 8px;
+  display: flex;
+  justify-content: center;
+  font-size: 2em;
+}
+body .login-page .l-form .icon-login-container .l-icon {
+  margin: 0px 4px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+body .login-page .l-form .icon-login-container .l-icon:hover {
+  color: #3ac772;
 }
 body .box-content {
   min-height: calc(var(--vh, 1vh) * 92);

@@ -1,4 +1,8 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+
+const login = createAsyncThunk("login/signin", async (state, action) => {
+  console.log(action.payload);
+});
 
 const loginSlice = createSlice({
   name: "login",

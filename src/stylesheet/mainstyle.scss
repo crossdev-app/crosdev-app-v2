@@ -171,8 +171,14 @@ body {
   }
 
   .login-page {
-    height: calc(var(--vh, 1vh) * 90 - 50px);
+    min-height: calc(var(--vh, 1vh) * 90 - 40px);
     display: flex;
+
+    @include scs {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
 
     .l-logo {
       width: 50%;
@@ -180,6 +186,11 @@ body {
       justify-content: center;
       align-items: center;
       position: relative;
+
+      @include scs {
+        width: 100%;
+        height: 100px;
+      }
 
       .l-img {
         height: 60px;
@@ -192,19 +203,30 @@ body {
         background-color: rgba(0, 173, 85, 0.3);
         border-radius: 50px;
         right: 0;
+
+        @include scs {
+          height: 1px;
+          width: 80%;
+          bottom: -10px;
+          left: 50%;
+          transform: translateX(-50%);
+        }
       }
     }
 
     .l-form {
       width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      color: #777;
 
-      .sgnin {
-        margin-top: 100px;
-        margin-bottom: 30px;
+      @include scs {
+        width: 100%;
       }
 
-      .sgnup {
-        margin-top: 50px;
+      h3 {
+        margin-top: 30px;
         margin-bottom: 30px;
       }
 
@@ -213,13 +235,35 @@ body {
         width: 80%;
         max-width: 300px;
         // border: 1px solid $base-green-light;
-        height: 100px;
 
         p {
           margin-top: 30px;
           color: #777;
           text-align: center;
         }
+      }
+
+      .btm-text {
+        font-style: italic;
+        font-size: 0.8em;
+      }
+
+      .icon-login-container {
+        margin-top: 8px;
+        display: flex;
+        justify-content: center;
+        font-size: 2em;
+
+        .l-icon {
+          margin: 0px 4px;
+          cursor: pointer;
+          transition: all .2s ease-in-out;
+
+          &:hover {
+            color: $base-green-light;
+          }
+        }
+        
       }
     }
   }
